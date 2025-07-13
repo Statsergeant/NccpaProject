@@ -1,0 +1,20 @@
+.tab-content.html-fill-item.html-fill-container {
+
+  background: linear-gradient(98deg, rgba(62, 23, 97, 0.84), rgba(92, 55, 126, 0)), url(https://www.nccpa.net/wp-content/uploads/2025/06/AdobeStock_632060205-scaled.jpeg) no-repeat center center;background-size: auto, cover;
+
+}
+
+#home_title {
+ color : white;
+ margin-top: 16rem;
+ margin-left: auto;
+ margin-right: auto;
+ font-size : 7rem;
+}
+
+#home_secondtitle {
+  color : white;
+  font-size: 5rem;
+ margin-left: auto;
+ margin-right: auto;
+}
