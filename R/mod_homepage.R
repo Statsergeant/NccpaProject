@@ -11,6 +11,7 @@ mod_homepage_ui <- function(id) {
   ns <- NS(id)
     nav_panel(
       title = 'Homepage',
+      icon = icon('home'),
       h1('NCCPA Intreview', id = 'home_title'),
       h3('Geo Jeong', id = 'home_secondtitle')
       # includeScript('www/homepage.js')

@@ -10,7 +10,21 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     page_navbar(
+      # theme = bs_theme(
+      #   # Controls the default grayscale palette
+      #   bg = "#202123", fg = "#B8BCC2",
+      #   # Controls the accent (e.g., hyperlink, button, etc) colors
+      #   primary = "#EA80FC", secondary = "#48DAC6",
+      #   base_font = c("Grandstander", "sans-serif"),
+      #   code_font = c("Courier", "monospace"),
+      #   heading_font = "'Helvetica Neue', Helvetica, sans-serif",
+      #   # Can also add lower-level customization
+      #   "input-border-color" = "#EA80FC"
+      #
+      # ),
+
       title = 'NCCPA Interview',
+      nav_spacer(),
       mod_homepage_ui('homepage')
     )
   )

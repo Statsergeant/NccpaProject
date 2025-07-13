@@ -1,8 +1,8 @@
-(function() {
+(function () {
   const image_href = [
-    "url(https://www.nccpa.net/wp-content/uploads/2024/10/nurse-showing-elderly-man-brochure.jpg) no-repeat center center / cover / linear-gradient(98deg, rgba(62, 23, 97, 0.84), rgba(92, 55, 126, 0))",
-    "url(https://www.nccpa.net/wp-content/uploads/2024/10/Data-Security.png) no-repeat center center / cover / linear-gradient(98deg, rgba(62, 23, 97, 0.84), rgba(92, 55, 126, 0))",
-    "url(https://www.nccpa.net/wp-content/uploads/2024/10/pexels-tofros-com-83191-359757-scaled.jpg) no-repeat center center / cover / linear-gradient(98deg, rgba(62, 23, 97, 0.84), rgba(92, 55, 126, 0))"
+    "linear-gradient(98deg, rgba(62,23,97,0.84), rgba(92,55,126,0)), url('https://www.nccpa.net/wp-content/uploads/2024/10/nurse-showing-elderly-man-brochure.jpg')",
+    "linear-gradient(98deg, rgba(62,23,97,0.84), rgba(92,55,126,0)), url('https://www.nccpa.net/wp-content/uploads/2024/10/Data-Security.png')",
+    "linear-gradient(98deg, rgba(62,23,97,0.84), rgba(92,55,126,0)), url('https://www.nccpa.net/wp-content/uploads/2024/10/pexels-tofros-com-83191-359757-scaled.jpg')"
   ];
 
   let currentIndex = 0;
@@ -15,14 +15,22 @@
       return;
     }
 
-    // Set initial background
-    target.css("background", image_href[currentIndex]);
+    function updateBackground() {
+      target.css({
+        "background-image": image_href[currentIndex],
+        "background-size": "cover",
+        "background-position": "center",
+        "background-repeat": "no-repeat"
+      });
+    }
 
-    // Change background every 5 seconds
+    updateBackground();
+
     setInterval(function () {
       currentIndex = (currentIndex + 1) % image_href.length;
       target.fadeOut(500, function () {
-        target.css("background", image_href[currentIndex]).fadeIn(500);
+        updateBackground();
+        target.fadeIn(500);
       });
     }, 5000);
   });
