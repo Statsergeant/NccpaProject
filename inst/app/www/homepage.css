@@ -1,12 +1,50 @@
-.tab-content.html-fill-item.html-fill-container {
 
-  background: linear-gradient(98deg, rgba(62, 23, 97, 0.84), rgba(92, 55, 126, 0)), url(https://www.nccpa.net/wp-content/uploads/2025/06/AdobeStock_632060205-scaled.jpeg) no-repeat center center;background-size: auto, cover;
+#background-container {
+  position: relative;
+  width: 100%;
+  height: 93vh;
+  overflow: hidden;
+}
 
+#rotating-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+.gradient-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(98deg, rgba(62,23,97,0.84), rgba(92,55,126,0));
+  z-index: 1;
+}
+
+#rotating-bg {
+  z-index: 0;
+}
+
+
+.tab-pane[data-value="Homepage"] {
+  min-height: 93vh;
+  overflow: hidden;
+}
+
+
+#text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  text-align: center;
 }
 
 #home_title {
  color : white;
- margin-top: 16rem;
  margin-left: auto;
  margin-right: auto;
  font-size : 7rem;
@@ -17,4 +55,44 @@
   font-size: 5rem;
  margin-left: auto;
  margin-right: auto;
+}
+
+.figure > figcaption {
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.realtitle {
+    text-align: center;
+    font-size : 25px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.author {
+    text-align: center;
+    color: grey;
+    margin: 0;
+    padding: 0;
+}
+
+.Tabletitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+.space{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.space >p {
+    display: inline;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }

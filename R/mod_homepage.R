@@ -12,8 +12,16 @@ mod_homepage_ui <- function(id) {
     nav_panel(
       title = 'Homepage',
       icon = icon('home'),
-      h1('NCCPA Intreview', id = 'home_title'),
-      h3('Geo Jeong', id = 'home_secondtitle')
+      HTML('
+           <div id="background-container">
+              <img id="rotating-bg" src="" alt="rotating background" />
+              <div class="gradient-overlay"></div>
+              <div id="text-overlay">
+                <h1 id="home_title">NCCPA Interview</h1>
+                <h3 id="home_secondtitle">Geo Jeong</h3>
+              </div>
+            </div>
+           ')
       # includeScript('www/homepage.js')
     )
 }

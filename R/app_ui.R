@@ -24,8 +24,16 @@ app_ui <- function(request) {
       # ),
 
       title = 'NCCPA Interview',
-      nav_spacer(),
-      mod_homepage_ui('homepage')
+
+      mod_homepage_ui('homepage'),
+      mod_Resume_ui('Resume'),
+      nav_panel(
+        "Birthday",
+        icon = icon("cake-candles"),
+        mod_Birthday_ui("birthday")
+      ),
+      mod_CoffeeComsumption_ui('coffee'),
+      nav_spacer()
     )
   )
 }
