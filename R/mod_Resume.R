@@ -45,7 +45,8 @@ html <- HTML(
   <strong>Durham, NC 27703</strong> | <a href="mailto:statsergeant@gmail.com">statsergeant@gmail.com</a> |
   <strong>980-210-8515</strong> | <strong>Green Card</strong> |
   <a href="https://statsergeant.quarto.pub/statsergeant/" target="_blank">https://statsergeant.quarto.pub/statsergeant/</a>
-</p><hr style = "margin: 0.5rem 0; margin-right: 20rem;">
+</p>
+
 
 <hr style="margin-bottom: 1.5rem;">
 

@@ -1,0 +1,12 @@
+name: NccpaProject
+title: NccpaProject
+username: statsergeant
+account: statsergeant
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15076372
+bundleId: 10623756
+url: https://statsergeant.shinyapps.io/NccpaProject/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

@@ -2,7 +2,7 @@
 #'
 #' @param request Internal parameter for `{shiny}`.
 #'     DO NOT REMOVE.
-#' @import shiny bslib
+#' @import shiny bslib golem
 #' @noRd
 app_ui <- function(request) {
   tagList(
@@ -33,7 +33,14 @@ app_ui <- function(request) {
         mod_Birthday_ui("birthday")
       ),
       mod_CoffeeComsumption_ui('coffee'),
-      nav_spacer()
+      nav_spacer(),
+      nav_item(
+        tags$a(
+          href = "https://github.com/Statsergeant/NccpaProject",
+          target = "_blank",  # opens in new tab
+          fontawesome::fa("github")  # GitHub icon
+        )
+      )
     )
   )
 }

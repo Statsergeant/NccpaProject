@@ -1,29 +1,10 @@
-#' Run the Shiny Application
+#' Run the Application
 #'
-#' @param ... arguments to pass to golem_opts.
-#' See `?golem::get_golem_options` for more details.
-#' @inheritParams shiny::shinyApp
-#'
+#' @param ... additional parameters
 #' @export
-#' @importFrom shiny shinyApp
-#' @importFrom golem with_golem_options
-
-run_app <- function(
-  onStart = NULL,
-  options = list(),
-  enableBookmarking = NULL,
-  uiPattern = "/",
-  ...
-) {
+run_app <- function(...) {
   with_golem_options(
-    app = shinyApp(
-      ui = app_ui,
-      server = app_server,
-      onStart = onStart,
-      options = options,
-      enableBookmarking = enableBookmarking,
-      uiPattern = uiPattern
-    ),
+    app = shinyApp(ui = app_ui, server = app_server),
     golem_opts = list(...)
   )
 }
